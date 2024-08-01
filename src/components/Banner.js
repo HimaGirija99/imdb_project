@@ -4,9 +4,9 @@ function Banner() {
   return (
     <div className='w-full h-[10vh] md:h-[40vh] bg-center bg-no-repeat flex items-end'
         style = {{
-            backgroundImage :  `url(https://i.pinimg.com/564x/ee/a8/fa/eea8fa698bc52a96791f637c4de3ac3e.jpg)`
+            backgroundImage :  `url(https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.vintagemovieposters.co.uk%2Fshop%2Favengers-movie-poster%2F&psig=AOvVaw2GT5HNSNbA-JFa4ZFeEpG2&ust=1722601499778000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCPjHpvnk04cDFQAAAAAdAAAAABAE)`
         }}>
-            <div className='text-xl md:text-3xl bg-gray-400 bg-opacity-60 p-4 text-white text-center w-full'>Satakarni</div>
+            <div className='text-xl md:text-3xl bg-gray-400 bg-opacity-60 p-4 text-white text-center w-full'>Avengers</div>
     </div>
   )
 }
