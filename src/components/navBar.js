@@ -1,5 +1,5 @@
 import React from 'react'
-import Logo from './movieLogo.png'
+import Logo from '../movieLogo.png'
 function navBar() {
   return (    
     <div className = 'flex border space-x-8 items-center pl-3 py-4'>  
