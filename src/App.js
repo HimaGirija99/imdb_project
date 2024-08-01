@@ -5,13 +5,14 @@ import './App.css';
 import './App.css';
 import Banner from './components/Banner';
 import NavBar from './components/navBar';
-
+import Movies from './components/Movies';
 
 function App() {
   return (    
     <>
       <NavBar/>
-      <Banner/>      
+      <Banner/>  
+      <Movies/>    
     </>  
     
   );
