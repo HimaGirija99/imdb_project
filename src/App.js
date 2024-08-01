@@ -10,8 +10,9 @@ function App() {
     <h3 className = 'text-blue-400'>Movies</h3>
     <h3 className = 'text-blue-400'>WatchList</h3>
     
-      <Banner/>
+    <div><Banner/></div>
     </div>
+    
   );
 }
 
