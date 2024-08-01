@@ -2,7 +2,7 @@ import React from 'react'
 
 function Banner() {
   return (
-    <div className='h-[10vh] md:h-[40vh] bg-center bg-no-repeat flex items-end'
+    <div className='h-[20vh] md:h-[60vh] bg-center bg-no-repeat flex items-end'
         style = {{
             backgroundImage :  `url(https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.vintagemovieposters.co.uk%2Fshop%2Favengers-movie-poster%2F&psig=AOvVaw2GT5HNSNbA-JFa4ZFeEpG2&ust=1722601499778000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCPjHpvnk04cDFQAAAAAdAAAAABAE)`
         }}>
