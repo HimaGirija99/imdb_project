@@ -1,17 +1,18 @@
 
 import './App.css';
-// import navBar from './components/navBar'
-import Banner from './components/Banner'
+// eslint-disable-next-line no-unused-vars
+
+import './App.css';
+import Banner from './components/Banner';
+import NavBar from './components/navBar';
+
 
 function App() {
-  return (
-    
-    <div>
-      
-      <Banner/>
-      <navBar/>
-    </div>
-  
+  return (    
+    <>
+      <NavBar/>
+      <Banner/>      
+    </>  
     
   );
 }
