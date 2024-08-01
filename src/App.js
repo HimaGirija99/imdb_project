@@ -1,10 +1,12 @@
 
 import './App.css';
+import navBar from './components/navBar'
 
 function App() {
   return (
-    <div>      
-        <h1 className = 'text-blue-400'>React App IMDB</h1>        
+    <div className = 'flex border space-x-8 items-center pl-3 py-4'>       
+    <h3>Movies</h3>
+    <h3>WatchList</h3>
     </div>
   );
 }
