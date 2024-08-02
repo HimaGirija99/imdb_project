@@ -15,8 +15,7 @@ function Movies() {
   useEffect(()=>{
     //IIFE
     (function(){
-      axios.get(`https://api.themoviedb.org/3/trending/movie/day?api_key=6d6ce2e8cc1e787add81ef111ff95f0bpage=${pageNum}`).then((res)=>{ 
-        setMovies(res.data.results)        
+      axios.get(`https://api.themoviedb.org/3/trending/movie/day?api_key=6d6ce2e8cc1e787add81ef111ff95f0bpage=${pageNum}`).then((res)=>{setMovies(res.data.results)        
       });
     })()
   },[pageNum])
