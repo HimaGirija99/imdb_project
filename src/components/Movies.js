@@ -2,6 +2,15 @@ import React, {useEffect, useState} from 'react'
 import axios from 'axios'
 function Movies() {
   const[movies, setMovies] = useState([])
+  const[pageNum, setPageNum] = useState(1)
+  const onNext=()=>{
+      setPageNum(pageNum+1)
+  }
+  const onPrev=()=>{
+    if(pageNum>1){
+      setPageNum(pageNum-1)
+    }
+  }
   useEffect(()=>{
     //IIFE
     (function(){
