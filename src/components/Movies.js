@@ -5,7 +5,8 @@ import Pagination from './Pagination'
 function Movies() {
   const[movies, setMovies] = useState([])
   const[pageNum, setPageNum] = useState(1)
-  const [watchList, setWatchList] = useState([]);
+  const [watchList, setWatchList] = useState([])
+  const [hovered , setHovered] = useState('')
   const onNext=()=>{
       setPageNum(pageNum+1)
   }
@@ -25,6 +26,13 @@ function Movies() {
 
     setWatchList(filteredWatchList);    
   };
+    const showButton = (id)=>{
+      setHovered(id) // 2
+  }
+
+  const hideButton = ()=>{
+    setHovered('')
+  }
   useEffect(()=>{
     //IIFE
     (function(){
@@ -33,7 +41,7 @@ function Movies() {
       });
     })()
   },[pageNum])
-  console.log(pageNum)
+  
   
   
   return (
@@ -41,8 +49,10 @@ function Movies() {
     <div className='text-2xl mb-8 font-bold text-center'>Trending Movies</div>    
     <div className='flex flex-wrap'>
       {movies.map((movie)=>{
-        return <div key={movie.id} className='w-[160px] h-[30vh] bg-center bg-cover rounded-xl m-4 md:h-[40vh] md:w-[180px] hover:scale-110 duration-300 relative flex items-end' style= {{backgroundImage: `url(https://image.tmdb.org/t/p/original/t/p/w500/${movie.poster_path})`,}}
-        ><div className="text-2xl p-2 bg-gray-900 rounded-2xl absolute right-2 top-2">
+        return <div onMouseOver={()=> showButton(movie.id)}
+        onMouseLeave={()=> hideButton()}
+        key={movie.id} className='w-[160px] h-[30vh] bg-center bg-cover rounded-xl m-4 md:h-[40vh] md:w-[180px] hover:scale-110 duration-300 relative flex items-end' style= {{backgroundImage: `url(https://image.tmdb.org/t/p/original/t/p/w500/${movie.poster_path})`,}}
+        ><div className="text-2xl p-2 bg-gray-900 rounded-2xl absolute right-2 top-2" style={{display : hovered === movie.id ? 'block' : 'none'}}>
          {watchList.includes(movie) === false ? (
            <div onClick={() => addToWatchList(movie)}> 😍 </div>
          ) : (
