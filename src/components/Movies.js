@@ -1,5 +1,6 @@
 import React, {useEffect, useState} from 'react'
 import axios from 'axios'
+import Pagination from './Pagination'
 function Movies() {
   const[movies, setMovies] = useState([])
   const[pageNum, setPageNum] = useState(1)
@@ -35,6 +36,7 @@ function Movies() {
       })}
     
     </div>
+    <Pagination pageNum={pageNum}/>
     </div>
   )
 }
