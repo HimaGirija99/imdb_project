@@ -19,8 +19,8 @@ function Movies() {
         setMovies(res.data.results)        
       });
     })()
-  },[])
-  console.log(movies)
+  },[pageNum])
+  console.log(pageNum)
   
   
   return (
