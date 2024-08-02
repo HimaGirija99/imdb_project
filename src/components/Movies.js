@@ -1,6 +1,9 @@
 import React from 'react'
 import axios from 'axios'
 function Movies() {
+  axios.get(`https://api.themoviedb.org/3/trending/movie/day?api_key=6d6ce2e8cc1e787add81ef111ff95f0blanguage=en-US`)
+  .then((res)=>{console.log(res.data.results)})
+  
   return (
     <div>
     <div className='text-2xl mb-8 font-bold text-center'>Trending Movies</div>    
