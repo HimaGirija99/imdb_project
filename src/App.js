@@ -6,13 +6,28 @@ import './App.css';
 import Banner from './components/Banner';
 import NavBar from './components/navBar';
 import Movies from './components/Movies';
+import WatchList from './components/WatchList'; 
 
 function App() {
   return (    
     <>
-      <NavBar/>
-      <Banner/>  
-      <Movies/>    
+     <BrowserRouter>
+      <NavBar />
+
+      <Routes>
+          <Route
+            path="/"
+            element={
+              <>
+                <Banner />
+                <Movies />
+              </>
+            }
+          />
+
+          <Route path="/watchlist" element={<WatchList />} />
+        </Routes>
+      </BrowserRouter>
     </>  
     
   );
