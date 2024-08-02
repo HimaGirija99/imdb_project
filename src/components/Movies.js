@@ -36,7 +36,7 @@ function Movies() {
       })}
     
     </div>
-    <Pagination pageNum={pageNum}/>
+    <Pagination pageNum={pageNum} onNext={onNext} onPrev={onPrev}/>
     </div>
   )
 }
