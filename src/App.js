@@ -1,8 +1,7 @@
 
 import './App.css';
-// eslint-disable-next-line no-unused-vars
+import { BrowserRouter, Routes, Route } from 'react-router-dom'; // Import the necessary components
 
-import './App.css';
 import Banner from './components/Banner';
 import NavBar from './components/navBar';
 import Movies from './components/Movies';
