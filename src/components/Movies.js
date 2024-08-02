@@ -2,7 +2,7 @@ import React from 'react'
 
 function Movies() {
   return (
-    <div>Movies</div>
+    <div className="text-2xl mb-8 font-bold text-center">Trending Movies</div>
   )
 }
 
