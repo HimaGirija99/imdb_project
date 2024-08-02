@@ -21,7 +21,7 @@ function Movies() {
         
       });
     })()
-  },[])
+  },[pageNum])
   console.log(movies)
   
   
