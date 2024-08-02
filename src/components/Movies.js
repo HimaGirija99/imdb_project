@@ -1,14 +1,18 @@
-import React, {useEffect} from 'react'
+import React, {useEffect, useState} from 'react'
 import axios from 'axios'
 function Movies() {
+  const[movies, setMovies] = useState([])
   useEffect(()=>{
     //IIFE
     (function(){
       axios.get(`https://api.themoviedb.org/3/trending/movie/day?api_key=6d6ce2e8cc1e787add81ef111ff95f0b`).
-      then((res)=>{console.log(res.data.results)});
+      then((res)=>{ 
+        setMovies(res.data.results)
+        
+      });
     })()
   },[])
-    
+  console.log(movies)
   
   
   return (
