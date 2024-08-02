@@ -19,7 +19,7 @@ function Movies() {
         setMovies(res.data.results)        
       });
     })()
-  },[pageNum])
+  },[])
   console.log(movies)
   
   
