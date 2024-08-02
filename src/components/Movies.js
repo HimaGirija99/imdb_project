@@ -2,8 +2,12 @@ import React, {useEffect} from 'react'
 import axios from 'axios'
 function Movies() {
   useEffect(()=>{
-    axios.get(`https://api.themoviedb.org/3/trending/movie/day?api_key=6d6ce2e8cc1e787add81ef111ff95f0b`).then((res)=>{console.log(res.data.results)});
-  }, [])
+    //IIFE
+    (function(){
+      axios.get(`https://api.themoviedb.org/3/trending/movie/day?api_key=6d6ce2e8cc1e787add81ef111ff95f0b`).then((res)=>{console.log(res.data.results)});
+  }, [])()
+    })
+    
   
   
   return (
