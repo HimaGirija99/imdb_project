@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useMemo } from "react";
 
 function WatchList() {
   const [favourites, setFavourites] = useState([]);
@@ -7,7 +7,7 @@ function WatchList() {
   const [rating, setRating] = useState(0);
   const [searchStr, setSearchStr] = useState("");
 
-  let genreids = {
+  const genreids = useMemo(() => ({
     28: "Action",
     12: "Adventure",
     16: "Animation",
@@ -27,7 +27,7 @@ function WatchList() {
     53: "Thriller",
     10752: "War",
     37: "Western",
-  };
+  }), []);
 
   useEffect(() => {
     let moviesFromLocalStorage = localStorage.getItem("imdb");
@@ -41,25 +41,25 @@ function WatchList() {
     let temp = favourites.map((movie) => genreids[movie.genre_ids[0]]);
     temp = new Set(temp); // imp
     setGenres(["All Genres", ...temp]);
-  });
+  },[favourites, genreids]);
 
   let filteredArray = [];
 
   // genre Filter
 
   filteredArray =
-    currGenre == "All Genres"
+    currGenre === "All Genres"
       ? favourites
       : favourites.filter((movie) => genreids[movie.genre_ids[0]] == currGenre);
 
   // Sorting with Respect to ratings
-  if (rating == -1) {
+  if (rating === -1) {
     filteredArray = filteredArray.sort(function (objA, objB) {
       return objB.vote_average - objA.vote_average;
     });
   }
 
-  if (rating == 1) {
+  if (rating === 1) {
     filteredArray = filteredArray.sort(function (objA, objB) {
       return objA.vote_average - objB.vote_average;
     });
