@@ -72,7 +72,7 @@ function WatchList() {
   // Sorting with respect to popularity
 
   const del = (movie) => {
-    let newArray = favourites.filter((m) => m.id != movie.id);
+    let newArray = favourites.filter((m) => m.id !== movie.id);
     setFavourites([...newArray]);
     localStorage.setItem("imdb", JSON.stringify(newArray));
   };
@@ -84,7 +84,7 @@ function WatchList() {
           return (
             <button
               className={
-                currGenre == genre
+                currGenre === genre
                   ? "m-2 text-lg p-1 px-2 bg-blue-400 text-white rounded-xl font-bold"
                   : "m-2 text-lg p-1 px-2 bg-gray-400 hover:bg-blue-400 text-white rounded-xl font-bold"
               }
