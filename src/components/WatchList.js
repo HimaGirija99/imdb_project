@@ -32,7 +32,11 @@ function WatchList() {
   useEffect(() => {
     let moviesFromLocalStorage = localStorage.getItem("imdb");
 
-    moviesFromLocalStorage = JSON.parse(moviesFromLocalStorage);
+    if (moviesFromLocalStorage) {
+      moviesFromLocalStorage = JSON.parse(moviesFromLocalStorage);
+    } else {
+      moviesFromLocalStorage = [];
+    }
 
     setFavourites(moviesFromLocalStorage);
   }, []);
