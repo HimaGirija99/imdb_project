@@ -50,7 +50,7 @@ function WatchList() {
   filteredArray =
     currGenre === "All Genres"
       ? favourites
-      : favourites.filter((movie) => genreids[movie.genre_ids[0]] == currGenre);
+      : favourites.filter((movie) => genreids[movie.genre_ids[0]] === currGenre);
 
   // Sorting with Respect to ratings
   if (rating === -1) {
