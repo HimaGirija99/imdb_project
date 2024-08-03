@@ -38,6 +38,9 @@ function Movies() {
   useEffect(()=>{
     //IIFE
     (function(){
+      let moviesFromLS = localStorage.getItem('imdb')
+      moviesFromLS = JSON.parse(moviesFromLS) || []
+      setWatchList(moviesFromLS)
       
       axios.get(`https://api.themoviedb.org/3/trending/movie/day?api_key=6d6ce2e8cc1e787add81ef111ff95f0b&page=${pageNum}`).then((res)=>{setMovies(res.data.results)        
       });
