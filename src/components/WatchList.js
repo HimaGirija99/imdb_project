@@ -117,7 +117,7 @@ function WatchList() {
               <th>
                 <div className="flex">
                   <img
-                    src="https://img.icons8.com/external-those-icons-lineal-those-icons/24/000000/external-up-arrows-those-icons-lineal-those-icons-3.png"
+                    src="https://img.icons8.com/external-those-icons-lineal-those-icons/24/000000/external-up-arrows-those-icons-lineal-those-icons-3.png" alt=""
                     className="mr-1"
                     onClick={() => {
                       setRating(1);
@@ -125,7 +125,7 @@ function WatchList() {
                   />
                   <div>Ratings</div>
                   <img
-                    src="https://img.icons8.com/external-those-icons-lineal-those-icons/24/000000/external-down-arrows-those-icons-lineal-those-icons-4.png"
+                    src="https://img.icons8.com/external-those-icons-lineal-those-icons/24/000000/external-down-arrows-those-icons-lineal-those-icons-4.png" alt=""
                     className="ml-1"
                     onClick={() => {
                       setRating(-1);
@@ -156,6 +156,7 @@ function WatchList() {
                     <img
                       class="h-[6rem]  w-[10rem] object-fit"
                       src={`https://image.tmdb.org/t/p/original/t/p/original/${movie.poster_path}`}
+                      alt=""
                     />
 
                     <div class="font-medium text-gray-700  text-sm">
