@@ -18,6 +18,7 @@ function Movies() {
   const addToWatchList = (movie) => {
     const newWatchList = [...watchList, movie];
     setWatchList(newWatchList);
+    localStorage.setItem('imdb' , JSON.stringify(newWatchList) )
   };
   const removeFromWatchList = (movie) => {
     const filteredWatchList = watchList.filter((m) => {
@@ -25,6 +26,7 @@ function Movies() {
     });
 
     setWatchList(filteredWatchList);    
+    localStorage.setItem('imdb' , JSON.stringify(filteredWatchList))
   };
     const showButton = (id)=>{
       setHovered(id) // 2
