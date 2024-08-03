@@ -48,7 +48,7 @@ function WatchList() {
   // genre Filter
 
   filteredArray =
-    currGenre === "All Genres"
+    currGenre === "All Genres" 
       ? favourites
       : favourites.filter((movie) => genreids[movie.genre_ids[0]] === currGenre);
 
